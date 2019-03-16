@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>构造函数模式</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="构造函数模式">
+</head>
+<body>
+	<script type="text/javascript">
+		// 无参构造函数模式
+		function Animal(){
+			this.name = "老虎";
+			this.age = 10;
+			this.food = "meat";
+		}
+		var tiger = new Animal();
+
+
+		// 带参数的构造函数模式
+		function Person(name, age, sex){			
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+		}
+		var girlFriend = new Person("叶露", 24, "女");
+		var boyFriend = new Person("喻飞翔", 24, "男" );
+		console.log(girlFriend,boyFriend);
+	</script>
+</body>
+</html>

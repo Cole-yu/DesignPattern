@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型链模式</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="原型链模式">
+</head>
+<body>
+	<script type="text/javascript">
+		// 原型链模式
+		function Person(){};
+		
+		Person.prototype.name = "叶露";
+		Person.prototype.age = 24;
+		Person.prototype.sex = "女";
+
+		Person.prototype.showName = function (){
+	        console.log(this.name);
+	    };
+	    Person.prototype.showAge = function (){
+	        console.log(this.age);
+	    };
+		
+		var girlFriend = new Person();
+		console.log(girlFriend);		
+		girlFriend.showName();
+		console.log(girlFriend.name);
+	</script>
+</body>
+</html>

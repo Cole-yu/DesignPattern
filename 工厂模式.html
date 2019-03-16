@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>工厂模式</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="工厂模式">
+</head>
+<body>
+	<script type="text/javascript">
+		function Person(name, age, sex){
+			var obj = new Object();
+			obj.name = name;
+			obj.age = age;
+			obj.sex = sex;
+			return obj;
+		}
+
+		var girlFriend = new Person("叶露", 24, "女");
+		var boyFriend = new Person("喻飞翔", 24, "男" );
+		console.log(girlFriend,boyFriend);
+	</script>
+</body>
+</html>

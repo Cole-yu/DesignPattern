@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>单例模式</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="单例模式">
+</head>
+<body>
+	<script type="text/javascript">
+		var Singleton = function(name){
+			this.name = name;
+			this.instance = null;
+		}
+
+		Singleton.prototype.getName = function(){
+			return this.name;
+		}
+
+		// function getInstance(name){
+		// 	if(!this.instance){
+		// 		this.instance = new Singleton(name);				
+		// 	}
+		// 	return this.instance;
+		// }
+
+		// 封装单例模式
+		var getInstance = (function(){
+			var instance = null;
+
+			// 闭包
+			return function(name){
+				if(!instance){
+					instance = new Singleton(name);
+				}
+				return instance;
+			}
+		})();
+
+		var a = getInstance("aa");
+		var b = getInstance("bb");
+
+		console.log(a == b);	// true
+	</script>
+</body>
+</html>
